@@ -9,7 +9,7 @@
 
 	<body>
 		<div class="container">
-			<div class="item item1">
+			<div class="item sidebar1">
 				<p>I'm Sidebar #1</p>
 			</div>
 			<div class="item item2">
@@ -31,8 +31,8 @@
 			.container {
 				display: grid;
 				grid-gap: 20px;
-				grid-template-columns: 1fr 500px 1fr;
-				grid-template-rows: 150px 150px 100px;
+				grid-template-columns: 1fr 2fr 1fr;
+				grid-template-rows: auto auto auto;
 				grid-template-areas:
 					'sidebar-1 content sidebar-2'
 					'sidebar-1 content sidebar-2'
@@ -43,7 +43,7 @@
 				grid-area: footer;
 			}
 
-			.item1 {
+			.sidebar1 {
 				grid-area: sidebar-1;
 			}
 
@@ -60,6 +60,15 @@
 					grid-template-areas:
 						'content content content'
 						'sidebar-1 sidebar-1 sidebar-2'
+						'footer footer footer';
+				}
+			}
+			@media (max-width: 400px) {
+				.container {
+					grid-template-areas:
+						'content content content'
+						'sidebar-1 sidebar-1 sidebar-1'
+						'sidebar-2 sidebar-2 sidebar-2'
 						'footer footer footer';
 				}
 			}

@@ -47,16 +47,19 @@
 				grid-gap: 20px;
 				grid-template-columns: [sidebar-start site-left] 1fr [sidebar-end content-start] 500px [content-end] 1fr [site-right];
 				grid-template-rows:
-					[sidebar-top content-top] repeat(5, auto) [sidebar-bottom] repeat(
-						5,
-						auto
-					)
+					[sidebar-top content-top]
+					repeat(5, auto)
+					[sidebar-bottom]
+					repeat(5, auto)
 					[content-bottom];
 			}
 			.item3 {
 				background: slateblue;
 				grid-column: content-start;
 				grid-row: content-top/content-bottom;
+			}
+			.item18 {
+				grid-column: site-left/site-right;
 			}
 			.sidebar {
 				background: slategrey;
